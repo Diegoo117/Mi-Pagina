@@ -1,0 +1,478 @@
+body{
+    font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-family: 'Poppins', sans-serif;
+}
+
+/*Barra de Scroll*/
+::-webkit-scrollbar{
+    width: 0;
+}
+#scroll{
+    position: fixed;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    width: .1px;
+    background: rgba(255, 255, 255, 0.05);
+}
+#barra{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%,100%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(360deg);
+    }
+}
+#barra::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(10px);
+}
+#barra::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    filter: blur(30px);
+
+}
+
+/*HEADER*/
+
+header{
+    background: #0a2a43;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.seccion-header{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center ;
+    
+}
+.seccion-header:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #071e30, transparent);
+    z-index: 10000;
+}
+.seccion-header:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(1, 47, 82, 0.9) ;
+    z-index: 10000;
+    mix-blend-mode:color;
+}
+
+.seccion-header img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#text{
+    position: relative;
+    color: #fff;
+    font-size: 7em ;
+    font-weight: 600;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 5px 10px 10px black;
+}
+#text2{
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-size: 5em ;
+    font-weight: 600;
+    z-index: 2;
+    text-shadow: 5px 10px 10px black;
+    
+}
+#road{
+    position: absolute;
+    z-index: 3;
+    
+}
+
+
+
+/* MAIN*/
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    background: #071e30;
+}
+.sobremi{
+    width: 80%;
+    background-color:  rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 5px 1px 20px black;
+
+    padding: 0 20px;
+}
+main .sobremi h1{
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    padding: 60px 0;
+}
+main .sobremi p{
+    text-align: justify;
+    line-height: 50px;
+    font-size: 1.5em;
+    color: #fff;
+
+}
+.circulo1{
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
+    float: left;
+    border-radius: 50%;
+    margin: 90px 30px 80px 20px;
+    shape-outside: circle() ;
+    box-shadow: -5px 1px 20px black;
+    
+}
+.circulo1 img{
+    width: 530px;
+    height: 500px;
+    object-fit: cover;
+    
+}
+
+/*BOTON ENTRAR*/
+
+.boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton a{
+    position: relative;
+    width: 160px;
+    height: 50px;
+    line-height: 48px;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 4;
+    text-decoration: none;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+    background: linear-gradient(45deg, #fb0094, #00f, #0f0, #ff0, #f00, #fb0094, #00f,  #0f0, #ff0, #f00) ;
+    background-size: 400%;
+    transition: 0.5s;
+    animation: animate 20s linear infinite ;
+
+}
+.boton a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #fb0094, #00f, #0f0, #ff0, #f00, #fb0094, #00f,  #0f0, #ff0, #f00) ;
+    background-size: 400%;
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 20s linear infinite ;
+} 
+.boton a::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #fb0094, #00f, #0f0, #ff0, #f00, #fb0094, #00f,  #0f0, #ff0, #f00) ;
+    background-size: 400%;
+    opacity: 0;
+    filter: blur(20px);
+    transition: 0.5s;
+    animation: animate 20s linear infinite ;
+} 
+.boton a:hover::before, .boton a:hover::after{
+    opacity: 1;
+}
+@keyframes animate{
+    0%{
+        background-position: 0 0 ;
+    }
+    50%{
+        background-position: 300% 0 ;
+    }
+    100%{
+        background-position: 0 0 ;
+    }
+
+}
+
+
+.boton a span{
+    position: absolute;
+    display: block;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    text-align: center;
+    background: #0c0c0c;
+    color: rgba(255, 255, 255, 0.2);
+    transition: 0.5s;
+    z-index: 1;
+
+}
+.boton a span:hover{
+    color: rgba(255, 255, 255, 1);
+}
+
+.boton a span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.1);
+} 
+
+
+/*Barra FOOTER*/
+
+/* .piePagina{
+    height: 50px;
+    margin-top: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+}
+
+.piePagina ul{
+    position: relative;
+    display: flex;
+}
+
+.piePagina ul li{
+    position: relative;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    margin: 0 30px;
+    transform: rotate(-30deg) skew(25deg);
+}
+
+.piePagina ul li span{
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    transition: 0.5s;
+    display: flex  !important;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 30px !important;
+}
+.piePagina ul li:hover span{
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1) ;
+}
+
+/* Efecto de capas*/
+/*
+.piePagina ul li:hover span:nth-child(5){
+    transform: translate(40px, -40px);
+    opacity: 1;
+}
+.piePagina ul li:hover span:nth-child(4){
+    transform: translate(30px, -30px);
+    opacity: .8;
+}
+.piePagina ul li:hover span:nth-child(3){
+    transform: translate(20px, -20px);
+    opacity: .6;
+}
+.piePagina ul li:hover span:nth-child(2){
+    transform: translate(10px, -10px);
+    opacity: .4;
+}
+.piePagina ul li:hover span:nth-child(1){
+    transform: translate(0,0);
+    opacity: .2;
+}
+.piePagina ul li:nth-child(1) span{
+    background: rgb(59, 78, 102);
+}
+.piePagina ul li:nth-child(2) span{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.piePagina ul li:nth-child(3) span{
+    background: #0077b5;
+}
+.piePagina ul li:nth-child(4) span{
+    background: #55acee;
+}
+ */
+
+
+/*////////////////////////////////*/
+
+
+
+
+
+@media (max-width: 500px){
+    #barra{
+        left: 0;
+    }
+    #text{
+        font-size: 2.5em;
+    }
+    #text2{
+        font-size: 1.5em;
+        margin-bottom: 200px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+    .sobremi{
+        padding: 0px 10px;
+    }
+    main .sobremi h1{
+        font-size: 1.2em;
+        font-weight: 600;
+        padding: 30px 0;
+    }
+    main .sobremi p{
+        line-height: 20px;
+        font-size: 0.8em;
+        padding-bottom: 30px;
+
+    
+    }
+    .circulo1{
+        width: 150px;
+        height: 150px;
+        margin: 80px 18px 80px 15px;
+        
+    }
+    .circulo1 img{
+        width: 150px;
+        height: 150px;
+        
+    }
+
+    .boton a{
+        font-size: 15px;
+        background: linear-gradient(45deg, #fb0094, #00f, #0f0, #ff0, #f00, #fb0094, #00f,  #0f0, #ff0, #f00) ;
+        background-size: 400%;
+        transition: 0.5s;
+        animation: animate 20s linear infinite ;
+        
+    }
+    .boton a span{
+        opacity: 1;
+        color: rgba(255, 255, 255, 1);
+    
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 501px) and  (max-width: 1024px) {
+    #text{
+        font-size: 4.5em;
+    }
+    #text2{
+        font-size: 3em;
+        margin-bottom: 200px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+    .sobremi{
+        padding-top: 40px;
+    }
+    main .sobremi h1{
+        font-size: 2.5em;
+        font-weight: 600;
+        padding: 30px 0;
+    }
+    main .sobremi p{
+        line-height: 30px;
+        font-size: 1em;
+    
+    }
+    .circulo1{
+        width: 350px;
+        height: 350px;
+        margin: 80px 18px 80px 15px;
+        
+    }
+    .circulo1 img{
+        width: 350px;
+        height: 350px;
+        
+    }
+
+}
