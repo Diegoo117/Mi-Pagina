@@ -368,7 +368,7 @@ main .sobremi p{
 
 
 
-@media (max-width: 700px){
+@media (max-width: 749px){
     #barra{
         left: 0;
         width: 3px;
@@ -486,7 +486,7 @@ main .sobremi p{
 
 
 
-@media (min-width: 701px) and  (max-width: 1367px) {
+@media (min-width: 750px) and  (max-width: 1367px) {
 
     #text{
         font-size: 4.5em;
@@ -558,6 +558,38 @@ main .sobremi p{
         border-radius: 15px;
         font-size: 35px !important;
     }
-
+    .piePagina ul li:hover span:nth-child(5){
+        transform: translate(0px, -25px);
+        opacity: 1;
+    }
+    .piePagina ul li:hover span:nth-child(4){
+        transform: translate(0px, -20px);
+        opacity: .8;
+    }
+    .piePagina ul li:hover span:nth-child(3){
+        transform: translate(0px, -15px);
+        opacity: .6;
+    }
+    .piePagina ul li:hover span:nth-child(2){
+        transform: translate(0px, -10px);
+        opacity: .4;
+    }
+    .piePagina ul li:hover span:nth-child(1){
+        transform: translate(0,0);
+        opacity: .2;
+    }
+    .piePagina ul li:nth-child(1) span{
+        background: rgb(59, 78, 102);
+    }
+    .piePagina ul li:nth-child(2) span{
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    }
+    .piePagina ul li:nth-child(3) span{
+        background: #0077b5;
+    }
+    .piePagina ul li:nth-child(4) span{
+        background: #55acee;
+    }
+    
 
 }
